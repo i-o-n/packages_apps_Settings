@@ -53,10 +53,10 @@
     <string name="unlock_quick_unlock_control_summary">Автоматическая разблокировка при вводе правильного PIN / пароля</string>
 
     <!-- Back Gesture Height -->
-    <string name="back_height_low_label">Полный</string>
-    <string name="back_height_high_label">Низ</string>
+    <string name="back_height_low_label">Вся</string>
+    <string name="back_height_high_label">Ниже</string>
     <string name="back_options_dialog_title">Параметры</string>
-    <string name="back_height_message">Высота экрана, используемая в качестве сенсорной области для жеста "Назад".</string>
+    <string name="back_height_message">Высота экрана, используемая в качестве сенсорной области для жеста возврата</string>
 
     <!-- App details: open play store link if app is user installed -->
     <string name="app_play_store">Google Play</string>
@@ -137,7 +137,7 @@
     <string name="data_usage_app_restrict_vpn">Данные VPN</string>
     <string name="data_usage_app_restrict_vpn_summary">Включить использование данных VPN</string>
     <string name="data_usage_app_restrict_wifi">Данные WiFi</string>
-    <string name="data_usage_app_restrict_wifi_summary">Включить использование данных Wi-Fi</string>
+    <string name="data_usage_app_restrict_wifi_summary">Включить использование данных WiFi</string>
 
     <!-- Hardware info -->
     <!-- Label for device's hardware platform value [CHAR LIMIT=40] -->
@@ -166,7 +166,7 @@
     <string name="increasing_ring_ramp_up_time_title">Время нарастания</string>
 
     <!-- LiveDisplay -->
-    <string name="live_display_summary">Оптимизируйте экран в зависимости от времени суток и окружающих условий, чтобы улучшить читаемость и уменьшить утомляемость глаз.</string>
+    <string name="live_display_summary">Оптимизируйте экран в зависимости от времени суток и окружающих условий, чтобы улучшить читаемость и уменьшить утомляемость глаз</string>
     <string name="live_display_mode">Режим экрана</string>
     <string name="live_display_color_temperature_title">Цветовая температура</string>
     <string name="live_display_color_temperature_summary">День: <xliff:g id="day_temperature">%1$d</xliff:g>K  Ночь: <xliff:g id="night_temperature">%2$d</xliff:g>K</string>
@@ -224,7 +224,7 @@
 
     <!-- Fingerprint to dismiss -->
     <string name="fp_swipe_to_dismiss_notifications_title">Провести пальцем по отпечатку пальца влево или вправо, чтобы отклонить уведомления</string>
-    <string name="fp_swipe_to_dismiss_notifications_summary">Чтобы отклонить уведомления, проведите пальцем влево или вправо по датчику отпечатка пальцев на задней панели телефона.</string>
+    <string name="fp_swipe_to_dismiss_notifications_summary">Чтобы отклонить уведомления, проведите пальцем влево или вправо по датчику отпечатка пальцев на задней панели телефона</string>
 
     <!-- Ambient display battery percentage -->
     <string name="ambient_battery_percent_title">Уровень заряда батареи снизу</string>
