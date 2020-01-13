@@ -278,6 +278,6 @@
     <string name="background_processes_settings_title">Background processes</string>
 
     <!-- NavigationBar Gestural Mode Tweaks -->
-    <string name="gesture_pill_title">Hide navigation bar pill</string>
-    <string name="gesture_pill_message">Hide the navigation bar pill for seamless fullscreen gestures</string>
+    <string name="gesture_pill_title">Скрыть Панель навигации</string>
+    <string name="gesture_pill_message">Скрытие навигационной панели для полноэкранных жестов</string>
 </resources>
