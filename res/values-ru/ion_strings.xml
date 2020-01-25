@@ -17,7 +17,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- ion -->
     <string name="ion_ionizer_title">ionizer</string>
-    <string name="ion_ionizer_summary">ionize Everything...</string>
+    <string name="ion_ionizer_summary">Дополнительные настройки прошивки</string>
 
     <!-- Ion-OS info -->
     <string name="ion_title">ion</string>
