@@ -261,8 +261,8 @@
     <string name="custom_light_off_time_title">Время выключения индикатора во время LED пульсации (мс)</string>
 
     <!-- Back gesture settings -->
-    <string name="back_gesture_arrow_title">Анимация стрелки "Назад"</string>
-    <string name="back_gesture_arrow_message">Скрыть стрелку жеста "Назад"</string>
+    <string name="back_gesture_arrow_title">Анимация жеста возврата</string>
+    <string name="back_gesture_arrow_message">Скрыть стрелку жеста возврата</string>
 
     <!-- Android debugging over WiFi -->
     <string name="adb_over_network">ADB по сети</string>
