@@ -23,10 +23,13 @@ import androidx.preference.PreferenceScreen;
 import com.android.settings.R;
 import com.android.settingslib.core.AbstractPreferenceController;
 
+import java.lang.CharSequence;
+
 public class RefreshRatePreferenceController extends AbstractPreferenceController implements
         Preference.OnPreferenceChangeListener {
 
     private static final String KEY_REFRESH_RATE = "refresh_rate_setting";
+    private int MAX_REFRESH_RATE;
 
     private ListPreference mRefreshRate;
     private int mDefaultRefreshRate;
@@ -54,6 +57,11 @@ public class RefreshRatePreferenceController extends AbstractPreferenceControlle
         mDefaultRefreshRate = mContext.getResources().getInteger(
                 com.android.internal.R.integer.config_defaultRefreshRate);
         mRefreshRate = (ListPreference) screen.findPreference(KEY_REFRESH_RATE);
+        MAX_REFRESH_RATE = mContext.getResources().getInteger(
+                com.android.internal.R.integer.config_defaultPeakRefreshRate);
+        CharSequence[] rrEntries = mRefreshRate.getEntries();
+        rrEntries[2] = String.valueOf(MAX_REFRESH_RATE) + "Hz";
+        mRefreshRate.setEntries(rrEntries);
         int refreshRate = Settings.System.getInt(mContext.getContentResolver(),
                 Settings.System.REFRESH_RATE_SETTING, mDefaultRefreshRate);
         mRefreshRate.setValue(String.valueOf(refreshRate));
@@ -75,7 +83,7 @@ public class RefreshRatePreferenceController extends AbstractPreferenceControlle
             case 0:
             default:
                 Settings.System.putInt(mContext.getContentResolver(),
-                        Settings.System.PEAK_REFRESH_RATE, 120);
+                        Settings.System.PEAK_REFRESH_RATE, MAX_REFRESH_RATE);
                 Settings.System.putInt(mContext.getContentResolver(),
                         Settings.System.MIN_REFRESH_RATE, 0);
                 break;
@@ -87,9 +95,9 @@ public class RefreshRatePreferenceController extends AbstractPreferenceControlle
                 break;
             case 2:
                 Settings.System.putInt(mContext.getContentResolver(),
-                        Settings.System.PEAK_REFRESH_RATE, 120);
+                        Settings.System.PEAK_REFRESH_RATE, MAX_REFRESH_RATE);
                 Settings.System.putInt(mContext.getContentResolver(),
-                        Settings.System.MIN_REFRESH_RATE, 120);
+                        Settings.System.MIN_REFRESH_RATE, MAX_REFRESH_RATE);
                 break;
         }
         updateRefreshRateSummary(refreshRate);
