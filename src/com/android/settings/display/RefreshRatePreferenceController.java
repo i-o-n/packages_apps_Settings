@@ -75,9 +75,9 @@ public class RefreshRatePreferenceController extends AbstractPreferenceControlle
             case 0:
             default:
                 Settings.System.putInt(mContext.getContentResolver(),
-                        Settings.System.PEAK_REFRESH_RATE, 90);
+                        Settings.System.PEAK_REFRESH_RATE, 120);
                 Settings.System.putInt(mContext.getContentResolver(),
-                        Settings.System.MIN_REFRESH_RATE, 60);
+                        Settings.System.MIN_REFRESH_RATE, 0);
                 break;
             case 1:
                 Settings.System.putInt(mContext.getContentResolver(),
@@ -87,9 +87,9 @@ public class RefreshRatePreferenceController extends AbstractPreferenceControlle
                 break;
             case 2:
                 Settings.System.putInt(mContext.getContentResolver(),
-                        Settings.System.PEAK_REFRESH_RATE, 90);
+                        Settings.System.PEAK_REFRESH_RATE, 120);
                 Settings.System.putInt(mContext.getContentResolver(),
-                        Settings.System.MIN_REFRESH_RATE, 90);
+                        Settings.System.MIN_REFRESH_RATE, 120);
                 break;
         }
         updateRefreshRateSummary(refreshRate);
@@ -99,7 +99,7 @@ public class RefreshRatePreferenceController extends AbstractPreferenceControlle
         if (refreshRate == 1) {
             mRefreshRate.setSummary(R.string.refresh_rate_summary_60);
         } else if (refreshRate == 2) {
-            mRefreshRate.setSummary(R.string.refresh_rate_summary_90);
+            mRefreshRate.setSummary(R.string.refresh_rate_summary_120);
         } else {
             mRefreshRate.setSummary(R.string.refresh_rate_summary_auto);
         }
